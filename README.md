@@ -1,21 +1,14 @@
 <a href="https://www.bigclown.com"><img src="https://s3.eu-central-1.amazonaws.com/bigclown/gh-readme-logo.png" alt="BigClown Logo" align="right"></a>
 
-# Firmware for BigClown Generic Node
+# Firmware for BigClown RF Test firmware
 
-[![Travis](https://img.shields.io/travis/bigclownlabs/bcf-generic-node/master.svg)](https://travis-ci.org/bigclownlabs/bcf-generic-node)
-[![Release](https://img.shields.io/github/release/bigclownlabs/bcf-generic-node.svg)](https://github.com/bigclownlabs/bcf-generic-node/releases)
-[![License](https://img.shields.io/github/license/bigclownlabs/bcf-generic-node.svg)](https://github.com/bigclownlabs/bcf-generic-node/blob/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/follow/BigClownLabs.svg?style=social&label=Follow)](https://twitter.com/BigClownLabs)
+You need both parties, TX and RX. Please see the other repository for counterpart firmware.
 
-This repository contains firmware for BigClown Generic Node.
+TX hardware: just Core Module
+RX hardware: Core Module, LCD module to display stats
 
-## Firmware Programming
-```
-dfu-util -s 0x08000000:leave -d 0483:df11 -a 0 -D firmware.bin
-```
-More information about dfu [here](https://doc.bigclown.com/core-module-flashing.html)
-
-Firmware for gateway is here [https://github.com/bigclownlabs/bcf-usb-gateway](https://github.com/bigclownlabs/bcf-usb-gateway)
+Also the battery modules are necessary if you don't want power by USB.
+For the best results dont use the micro battery module, which has battery contacts too close to the antenna. Or at least insert some another module between mini battery module and Core Module
 
 ## License
 
@@ -24,3 +17,5 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ---
 
 Made with &#x2764;&nbsp; by [BigClown Labs s.r.o.](https://www.bigclown.com) in Czech Republic.
+=======
+
